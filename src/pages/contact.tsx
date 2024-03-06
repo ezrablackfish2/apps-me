@@ -6,9 +6,11 @@ import { Button, Paragraph } from "@components/inputs";
 
 import { Headline, HighlightedPhrase } from '../components/layout/header/base-banner/base-baner.styles';
 import styled from 'styled-components';
+import map from "../../public/image/map.png";
 
 const EzraContainer = styled.div`
-    display: block;
+    display: inline-block;
+    width: 54.5%;
     font-size: 18px;
     color: #333; 
     margin-bottom: 0px;
@@ -64,10 +66,21 @@ const StyledInput3 = styled.input`
   }
 `;
 
+const StyledImagePreview = styled.img`
+  display: inline-block;
+  position: relative;
+  width: 40%; 
+  height: 477.83px;
+  object-fit: cover; 
+  border-radius: 5px; 
+  border: 1px solid #ccc;
+`;
+
 const WhoWeArePage = () => {
     const resolutionType: ResolutionType = useWindowResolutionType();
 
     return (
+    	<>
         <Theme>
             <BaseBanner
                 header={
@@ -82,9 +95,18 @@ const WhoWeArePage = () => {
                         Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym.
                     </Paragraph>
                 }
-		description={
-			<>
-			<EzraContainer>
+			description={<>
+			
+			
+			</>
+			}
+                buttons={
+		    <>
+		    
+		    </>
+                }
+            />
+	    <EzraContainer>
 				<StyledInput1 type="text" placeholder="Imię" />
 				<StyledInput2 type="text" placeholder="Nazwisko" />
 				<StyledInput1 type="text" placeholder="Imię" />
@@ -92,17 +114,11 @@ const WhoWeArePage = () => {
 				<StyledInput3 type="text" placeholder="Imię" />
 			<Button variant="primary" className="action-button md:mr-5">Wyślij wiadomość</Button>
 			</EzraContainer>
-			
-			</>
-		}
-                buttons={
-		    <>
-		    
-		    </>
-                }
-            />
+
+			<StyledImagePreview src={map} />
 	    
         </Theme>
+	</>
     );
 }
 
