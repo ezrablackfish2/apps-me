@@ -24,7 +24,7 @@ const StyledInput1 = styled.input`
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     outline: none;
 `;
 
@@ -35,9 +35,33 @@ const StyledInput2 = styled.input`
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     outline: none;
     margin-left: 6.7%;
+	
+`;
+
+const StyledInput3 = styled.input`
+    display: inline-block;
+    position: realtive;
+    width: 100%;
+    height: 168px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 35px;
+    outline: none;
+    vertical-align: top;
+    line-height: 168px;
+    text-align: top;
+    justify-content: top;
+    align-items: top;
+
+    &::placeholder {
+    position: absolute;
+    top: 30px;
+  }
 `;
 
 const WhoWeArePage = () => {
@@ -63,6 +87,9 @@ const WhoWeArePage = () => {
 			<EzraContainer>
 				<StyledInput1 type="text" placeholder="Imię" />
 				<StyledInput2 type="text" placeholder="Nazwisko" />
+				<StyledInput1 type="text" placeholder="Imię" />
+				<StyledInput2 type="text" placeholder="Nazwisko" />
+				<StyledInput3 type="text" placeholder="Imię" />
 			<Button variant="primary" className="action-button md:mr-5">Wyślij wiadomość</Button>
 			</EzraContainer>
 			
